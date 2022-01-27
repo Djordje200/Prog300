@@ -1,0 +1,83 @@
+MDScreen:
+    name: "main"
+	MDFloatLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+		
+		#padding: 50
+		#spacing: 20
+    MDFloatLayout:
+        md_bg_color: 26/255.0, 26/255.0, 26/255.0, 1
+
+
+    MDFloatLayout:
+        Image:
+            source: "topshape.png"
+            size_hint: 1, 1      
+            pos_hint: {"top":1.5}
+
+    MDFloatLayout:
+        Image:
+            source: "downshape.png"
+            size_hint: 1, 1      
+            pos_hint: {"top":0.58}
+
+    MDFloatLayout:
+        Image:
+            source: "Techeeto logo100.png"
+            size_hint: 0.5, 0.5    
+            pos_hint: {"x":0.25, "top":0.65}
+
+    MDFloatLayout:
+        MDLabel:
+            size_hint: 0.9, 0.1
+            text: "Dnevnni asistent za tehnološke probleme"
+            font_size: self.width/11
+            pos_hint: {"x":0.09, "top":0.8}
+            font_name: "futur2"
+            color: rgba(255, 255, 255, 255)
+
+    MDFloatLayout:
+        MDLabel:
+            size_hint: 0.8, 0.1
+            text: "Techeeto je aplikacija prvenstveno zadužena da Vam na najlakši način predstavi rješenje na problem vezane za tehnološke uređaje kao što su laptopi, telefoni, televizori.."
+            font_size: self.width/25
+            pos_hint: {"x":0.09, "top":0.69}
+            font_name: "futur3"
+            color: rgba(222, 222, 222, 255)
+
+
+#    MDLabel:
+#        text: "Helping you with the"
+#        font_name: "Futur"
+#        font_size: "13sp"
+#        pos_hint: {"center_y": .70}
+#        halign: "center"
+#        color: rgba(255, 255, 255, 255)
+
+#    MDLabel:
+#        text: "tech problems"
+#        font_name: "Futur"
+#        font_size: "13sp"
+#        pos_hint: {"center_y": .68}
+#        halign: "center"
+#        color: rgba(255, 255, 255, 255)
+
+    Button:
+        text: "Login"
+        size_hint: .30, .057
+        pos_hint: {"center_x": .5, "center_y": .17}
+        background_color: 0, 0, 0, 0
+        font_name: "Futur"
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "signup"
+        canvas.before:
+            Color:
+                rgb: rgba(25, 116, 104, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]   
+    
+   
