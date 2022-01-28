@@ -1,7 +1,7 @@
 MDScreen:
     name: "signup"
     MDFloatLayout:
-        md_bg_color: 1, 1, 1, 1
+        md_bg_color: 26/255.0, 26/255.0, 26/255.0, 1
         MDIconButton:
             icon: "arrow-left"
             pos_hint: {"center_y": .95}
@@ -11,3 +11,136 @@ MDScreen:
             on_release:
                 root.manager.transition.direction = "right"
                 root.manager.current = "main"
+
+    MDFloatLayout:
+        Image:
+            source: "test3.png"
+            size_hint: 0.2, 0.2   
+            pos_hint: {"x":0.4, "top":1.02}
+
+    MDFloatLayout:
+        Image:
+            source: "shape3.png"
+            size_hint: 1, 1 
+            pos_hint: {"x":0.07, "top":0.9}
+    
+    MDFloatLayout:
+        MDLabel:
+            size_hint: 0.9, 0.1
+            text: "Techeeto"
+            font_size: self.width/11
+            pos_hint: {"x":0.055, "top":0.9}
+            font_name: "futur"
+            color: rgba(255, 255, 255, 255)
+            halign: "center"            
+
+    MDFloatLayout:
+        MDLabel:
+            size_hint: 0.8, 0.1
+            text: "izaberite kategoriju sa kojom imate poteškoće"
+            font_size: self.width/15
+            pos_hint: {"x":0.09, "top":0.84}
+            font_name: "futur3"
+            color: rgba(222, 222, 222, 255)
+            halign: "center" 
+    Button:
+        text: "Telefoni"
+        size_hint: .40, .15
+        pos_hint: {"center_x": .27, "center_y": .65}
+        background_color: 0, 0, 0, 0
+        font_name: "futur2"
+        on_release:
+            root.manager.transition = FadeTransition()
+            root.manager.current = "telefoni"
+        canvas.before:
+            Color:
+                rgb: rgba(98, 205, 139, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]   
+
+    Button:
+        text: "Televizori"
+        size_hint: .40, .15
+        pos_hint: {"center_x": .73, "center_y": .65}
+        background_color: 0, 0, 0, 0
+        font_name: "futur2"
+        on_release:
+            root.manager.transition = FadeTransition()
+            root.manager.current = "televizori"
+        canvas.before:
+            Color:
+                rgb: rgba(98, 205, 139, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]
+
+    Button:
+        text: "Kompjuteri"
+        size_hint: .40, .15
+        pos_hint: {"center_x": .27, "center_y": .475}
+        background_color: 0, 0, 0, 0
+        font_name: "futur2"
+        on_release:
+            root.manager.transition = FadeTransition()
+            root.manager.current = "kompjuteri"
+        canvas.before:
+            Color:
+                rgb: rgba(56, 154, 119, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]   
+
+    Button:
+        text: "Tastature i miševi"
+        size_hint: .40, .15
+        pos_hint: {"center_x": .73, "center_y": .475}
+        background_color: 0, 0, 0, 0
+        font_name: "futur2"
+        on_release:
+            root.manager.transition = FadeTransition()
+            root.manager.current = "mis"
+        canvas.before:
+            Color:
+                rgb: rgba(56, 154, 119, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]
+
+    Button:
+        text: "Mikrofoni i Zvučnici"
+        size_hint: .86, .15
+        pos_hint: {"center_x": .5, "center_y": .297}
+        background_color: 0, 0, 0, 0
+        font_name: "futur2"
+        on_release:
+            root.manager.transition = FadeTransition()
+            root.manager.current = "zvucnici"
+        canvas.before:
+            Color:
+                rgb: rgba(24, 115, 103, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]
+
+    Button:
+        text: "Ostalo"
+        size_hint: .86, .15
+        pos_hint: {"center_x": .5, "center_y": .12}
+        background_color: 0, 0, 0, 0
+        font_name: "futur2"
+        on_release:
+            root.manager.transition = FadeTransition()
+            root.manager.current = "ostalo"
+        canvas.before:
+            Color:
+                rgb: rgba(2, 88, 93, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[26]
